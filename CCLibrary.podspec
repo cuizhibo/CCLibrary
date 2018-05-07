@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CCLibrary"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = 'objc chain programming.'
   s.homepage     = 'https://github.com/cuizhibo/CCLibrary'
   s.license      = 'MIT'
@@ -9,5 +9,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
   s.source       = { :git => "https://github.com/cuizhibo/CCLibrary.git", :tag => s.version}
-  s.source_files  = 'CCLibraryDemo/CCLibrary/**/*.{h,m}'
+  s.source_files  = 'CCLibraryDemo/CCLibrary/*.{h,m}'
+
+  s.subspec 'CUIkit' do |ss|
+      ss.source_files = 'CCLibraryDemo/CCLibrary/CUIkit/*.{h,m}'
+  end
 end
